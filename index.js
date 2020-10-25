@@ -42,7 +42,8 @@ client.on('guildMemberAdd', newMember => {
     let newUser = newMember.user.username;
     let welcomeMessages = [
         `WOOOP WOOOOP BICHTES! Die Party kann steigen! ${newUser} is hier!`,
-        `Ach nur ${newUser} ist es, niemand wichtiges.`
+        `Ach nur ${newUser} ist es, niemand wichtiges.`,
+        `Macht den Landeplatz für ${newUser} frei, denn ${newUser} landet in T-10, 9, 8........ Zu langsam... JETZT!!! :rocket:`
     ]
 
     let randomNumber = Math.floor(Math.random()*(welcomeMessages.length+1));
