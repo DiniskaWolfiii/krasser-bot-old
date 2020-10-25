@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 const {prefix, token, ownerID } = require('./botconfig.json');
 const shelljs = require('shelljs');
 const fs  = require('fs');
-const { isBuffer } = require('util');
+
+const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
 
@@ -22,8 +23,6 @@ fs.readdir('./commands', (err, files) => {
         client.commands.set(props.help.name, props);
     })
 });
-
-const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('Ready!');
