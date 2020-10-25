@@ -40,13 +40,7 @@ client.on('message', message => {
     if(command === 'pull') {
 
     } else if(command === 'reboot') {
-        if(message.author.id !== ownerID) return message.reply('DU BIST NICHT WOLFIII. HALTS MAUL! :c');
 
-        message.channel.send(':zzz: Good Night!')
-        .then(msg => {
-            client.destroy();
-            shelljs.exec('pm2 restart krasser-bot');
-        })
         
     }
 });
