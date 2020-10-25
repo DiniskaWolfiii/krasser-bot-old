@@ -38,14 +38,7 @@ client.on('message', message => {
     if(cmd) cmd.run(client, message, args);
 
     if(command === 'pull') {
-        if(message.author.id !== ownerID) return message.reply('DU BIST NICHT WOLFIII. HALTS MAUL! :c');
 
-        message.channel.send(':bulb: Pulling...')
-        .then(msg => {
-            shelljs.cd('/home/wolfiii/bots/krasser-bot')
-            shelljs.exec('git pull origin master')
-            msg.edit(':bulb: Pulled!');
-        })
     } else if(command === 'reboot') {
         if(message.author.id !== ownerID) return message.reply('DU BIST NICHT WOLFIII. HALTS MAUL! :c');
 
