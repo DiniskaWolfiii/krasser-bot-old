@@ -27,7 +27,10 @@ client.on('message', message => {
         if(message.author.id !== ownerID) return message.reply('DU BIST NICHT WOLFIII. HALTS MAUL! :c');
 
         message.channel.send(':zzz: Good Night!')
-        .then((msg), shelljs.exec('pm2 restart krasser-bot'))
+        .then(msg => {
+            client.destroy();
+            shelljs.exec('pm2 restart krasser-bot');
+        })
         
     }
 });
