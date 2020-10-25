@@ -6,7 +6,7 @@
  */
 module.exports.run = async (client, message, args) => {
     const {ownerID} = require('./../botconfig.json');
-    const shelljs = reuqire('shelljs');
+    const shelljs = require('shelljs');
 
     if(message.author.id !== ownerID) return message.reply('DU BIST NICHT WOLFIII. HALTS MAUL! :c');
 
