@@ -46,7 +46,7 @@ client.on('guildMemberAdd', newMember => {
         `Macht den Landeplatz für ${newUser} frei, denn ${newUser} landet in T-10, 9, 8........ Zu langsam... JETZT!!! :rocket:`
     ]
 
-    let randomNumber = Math.floor(Math.random()*(welcomeMessages.length+1));
+    let randomNumber = Math.floor(Math.random()*welcomeMessages.length);
 
     if(newMember.guild.id !== '565879649175994368') return;
     let welcomeEmbed = new Discord.MessageEmbed()
