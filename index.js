@@ -36,13 +36,21 @@ client.on('message', message => {
 
     let cmd = client.commands.get(command);
     if(cmd) cmd.run(client, message, args);
-
-    if(command === 'pull') {
-
-    } else if(command === 'reboot') {
-
-        
-    }
 });
+
+client.on('guildMemberAdd', newMember => {
+
+    if(newMember.guild.id !== '565879649175994368') return;
+    let welcomeEmbed = new Discord.MessageEmbed()
+    .setColor('#00FF00')
+    .setThumbnail(newMember.user.displayAvatarURL())
+    .setTitle('Neuer Krasser Dude ist dazu gekommen!')
+    .setDescription(`${newMember.user.username} ist dazu gekommen! Holt das Bier und heißt ihn Willkommen :beers:`);
+
+    let krasserChannel = newMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
+    krasserChannel.send(welcomeEmbed);
+
+    newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '692409031482015785'])
+})
 
 client.login(token);
