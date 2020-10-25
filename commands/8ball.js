@@ -7,6 +7,9 @@
  */
 module.exports.run = async (client, message, args) => {
     try {
+
+        if(!args) return message.channel.send("Es fehlen Argumente! Versuche !8ball Liebt er mich?")
+
         const Discord = require('discord.js');
         let antworten = [
             'Ja',
@@ -51,6 +54,6 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.help = {
     name: '8ball',
-    usage: '!8ball',
+    usage: '!8ball [Frage]',
     description: 'Lass dir die Fragen des Lebens beantworten'
 }
