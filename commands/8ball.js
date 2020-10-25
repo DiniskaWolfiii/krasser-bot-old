@@ -6,9 +6,9 @@
  * @param {import('discord.js').MessageEmbed}
  */
 module.exports.run = async (client, message, args) => {
-    try {
+//    try {
 
-        if(!args) return message.channel.send("Es fehlen Argumente! Versuche !8ball Liebt er mich?")
+        if(!args || args.length === 0) return message.channel.send("Es fehlen Argumente! Versuche ``!8ball Liebt er mich?``")
 
         const Discord = require('discord.js');
         let antworten = [
@@ -42,13 +42,13 @@ module.exports.run = async (client, message, args) => {
         .setColor('#636363')
         .setTitle(':8ball: 8Ball')
         .setThumbnail(client.user.displayAvatarURL())
-        .addField('Frage', alleArgs, true)
-        .addField('Antwort', antworten[randomNumber], true)
+        .addField('Frage', alleArgs)
+        .addField('Antwort', antworten[randomNumber])
 
         message.channel.send(krassesEmbed);
-    } catch (error) {
+/*    } catch (error) {
         message.channel.send("```js\n" + error + "\n```");
-    }
+    }*/
 
 }
 
