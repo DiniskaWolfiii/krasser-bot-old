@@ -39,13 +39,20 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', newMember => {
+    let newUser = newMember.user.username;
+    let welcomeMessages = [
+        `WOOOP WOOOOP BICHTES! Die Party kann steigen! ${newUser} is hier!`,
+        `Ach nur ${newUser} ist es, niemand wichtiges.`
+    ]
+
+    let randomNumber = Math.floor(Math.random()*(welcomeMessages.length+1);
 
     if(newMember.guild.id !== '565879649175994368') return;
     let welcomeEmbed = new Discord.MessageEmbed()
     .setColor('#00FF00')
     .setThumbnail(newMember.user.displayAvatarURL())
     .setTitle('Neuer Krasser Dude ist dazu gekommen!')
-    .setDescription(`${newMember.user.username} ist dazu gekommen! Holt das Bier und heißt ihn Willkommen :beers:`);
+    .setDescription(welcomeMessages[randomNumber]);
 
     let krasserChannel = newMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
     krasserChannel.send(welcomeEmbed);
