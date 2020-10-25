@@ -45,7 +45,7 @@ client.on('guildMemberAdd', newMember => {
         `Ach nur ${newUser} ist es, niemand wichtiges.`
     ]
 
-    let randomNumber = Math.floor(Math.random()*(welcomeMessages.length+1);
+    let randomNumber = Math.floor(Math.random()*(welcomeMessages.length+1));
 
     if(newMember.guild.id !== '565879649175994368') return;
     let welcomeEmbed = new Discord.MessageEmbed()
