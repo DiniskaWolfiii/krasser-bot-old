@@ -10,7 +10,7 @@ client.commands = new Discord.Collection();
 fs.readdir('./commands', (err, files) => {
     if(err) console.error(err);
 
-    let jsfiles = files.filter(f => split('.').pop() === 'js');
+    let jsfiles = files.filter(f => f.split('.').pop() === 'js');
     if(jsfiles.length <= 0) {
         console.log('Keine Commands zum laden...');
         return;
