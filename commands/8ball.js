@@ -26,7 +26,10 @@ module.exports.run = async (client, message, args) => {
             'Ohne Zweifel',
             'Keine Ahnung',
             'Du musst schon hart verzweifelt sein wenn du einer KUGEL solch eine Frage stellt, hm?',
-            'Frag später nicht nochmal nach'
+            'Frag später nicht nochmal nach',
+            'Frag doch einfach nochmaaaaal',
+            'Halts Maul, du Nutte',
+            'Es ist Montag, lass mich inruhe'
         ]
 
         let randomNumber = Math.floor(Math.random()*antworten.length);
