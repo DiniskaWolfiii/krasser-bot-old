@@ -35,7 +35,7 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} trinkt eine Tasse Chai*`,
             `*${messageUser} trinkt eine Tasse Chai Tea Latte*`,
         ]
-        let randomNumber = Math.floor(Math.random()*antworten.length);
+        let randomNumber = Math.floor(Math.random()*antwortenOhne.length);
         message.delete();
         if(taggedUser) return message.channel.send(antwortenTagged[randomNumber])
         else message.channel.send(antwortenOhne[randomNumber])
