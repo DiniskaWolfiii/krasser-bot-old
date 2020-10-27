@@ -9,14 +9,13 @@ module.exports.run = async (client, message, args) => {
     let taggedUser = message.mentions.members.first();
     if(!taggedUser) {
         message.delete();
-        return message.channel.send(`*${messageUser} hält einen Feuerball in der Hand, und hat keine Angst diesen einzusetzen :fire:*`)
+        return message.channel.send(`*${messageUser} frisst Pizza, gibt aber niemandem ein Stück davon ab! :pizza:*`)
     }
     try {
         let antworten = [
-            `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*Beim Versuch, ${taggedUser} anzuzünden, stolpert ${messageUser} und setzt ausversehen den Channel in Brand :fire:*`
+            `*${messageUser} gibt ${taggedUser} ein Stück Pizza :pizza:*`,
+            `*${messageUser} gibt ${taggedUser} ein Stück Pizza :pizza:*`,
+            `*${messageUser} brät ${taggedUser} eine mit einem Stück Pizza drüber :pizza:*`
         ]
         let randomNumber = Math.floor(Math.random()*antworten.length);
         message.delete();
@@ -28,7 +27,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: 'fire',
-    usage: '!fire <@User>',
-    description: 'Zündet einen User an'
+    name: 'pizza',
+    usage: '!pizza <@User>',
+    description: 'Verschenkt Pizza an einen User'
 }
