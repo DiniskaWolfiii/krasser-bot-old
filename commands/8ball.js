@@ -3,7 +3,6 @@
  *
  * @param {import('discord.js').Client} client
  * @param {import('discord.js').Message} message
- * @param {import('discord.js').MessageEmbed}
  */
 module.exports.run = async (client, message, args) => {
 //    try {
@@ -29,7 +28,8 @@ module.exports.run = async (client, message, args) => {
             'Frag später nicht nochmal nach',
             'Frag doch einfach nochmaaaaal',
             'Halts Maul, du Nutte',
-            'Es ist Montag, lass mich inruhe'
+            'Es ist Montag, lass mich inruhe',
+            ':zzz:'
         ]
 
         let randomNumber = Math.floor(Math.random()*antworten.length);

@@ -61,4 +61,24 @@ client.on('guildMemberAdd', newMember => {
     newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '692409031482015785'], "Auto Role Join")
 })
 
+client.on('guildMemberRemove', oldMember => {
+    const userName = oldMember.user.username;
+    let byeMessages = [
+        `${userName} hat diesen Server verlassen :(`,
+        `Die Treulose Tomate ${userName} hat uns verlassen! DIE SAU`,
+        `${userName} hat sich aus dem Server GEYEETED`
+    ]
+    let randomNumber = Math.floor(Math.random()*byeMessages.length);
+
+    if(oldMember.guild.id !== '565879649175994368') return;
+    let byeEmbed = new Discord.MessageEmbed()
+    .setColor('#00FF00')
+    .setThumbnail(oldMember.user.displayAvatarURL())
+    .setTitle('Neuer Krasser Dude ist dazu gekommen!')
+    .setDescription(byeMessages[randomNumber]);
+
+    let krasserChannel = oldMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
+    krasserChannel.send(byeEmbed);
+})
+
 client.login(token);
