@@ -44,7 +44,7 @@ module.exports.run = async (client, message, args) => {
         let krassesEmbed = new Discord.MessageEmbed()
         .setColor('#636363')
         .setTitle(':8ball: 8Ball')
-        .setThumbnail(client.user.displayAvatarURL())
+        .setThumbnail('https://cdn.pixabay.com/photo/2015/09/05/07/17/pool-ball-923833_960_720.png')
         .addField('Frage', alleArgs)
         .addField('Antwort', antworten[randomNumber])
 
