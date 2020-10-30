@@ -38,13 +38,10 @@ client.on('message', message => {
     if(cmd) cmd.run(client, message, args);
 });
 
-client.once('guildMemberAdd', newMember => {
-    console.log("Was geht");
-})
 
 
 
-/*client.on('guildMemberAdd', newMember => {
+client.on('guildMemberAdd', newMember => {
     let newUser = newMember.user.username;
     let welcomeMessages = [
         `WOOOP WOOOOP BICHTES! Die Party kann steigen! ${newUser} is hier!`,
@@ -85,6 +82,6 @@ client.on('guildMemberRemove', oldMember => {
 
     let krasserChannel = oldMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
     krasserChannel.send(byeEmbed);
-})*/
+})
 
 client.login(token);
