@@ -75,7 +75,7 @@ client.on('guildMemberRemove', oldMember => {
 
     if(oldMember.guild.id !== '565879649175994368') return;
     let byeEmbed = new Discord.MessageEmbed()
-    .setColor('#00FF00')
+    .setColor('#FF0000')
     .setThumbnail(oldMember.user.displayAvatarURL())
     .setTitle('Neuer Krasser Dude ist dazu gekommen!')
     .setDescription(byeMessages[randomNumber]);

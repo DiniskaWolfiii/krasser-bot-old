@@ -16,7 +16,7 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} zündet ${taggedUser} an :fire:*`,
             `*${messageUser} zündet ${taggedUser} an :fire:*`,
             `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*Beim Versuch, ${taggedUser} anzuzünden, stolpert ${messageUser} und setzt ausversehen den Channel in Brand :fire:*`
+            `*Beim Versuch ${taggedUser} anzuzünden, stolpert ${messageUser} und setzt ausversehen den Channel in Brand :fire:*`
         ]
         let randomNumber = Math.floor(Math.random()*antworten.length);
         message.delete();
