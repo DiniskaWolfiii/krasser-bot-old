@@ -15,6 +15,7 @@ module.exports.run = async (client, message, args) => {
         .then(msg => {
             shelljs.cd('/home/wolfiii/bots/krasser-bot')
             shelljs.exec('git pull origin master')
+            shelljs.exec('npm i')
             msg.edit(':bulb: Pulled!');
         })
     } catch (error) {
