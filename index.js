@@ -39,6 +39,10 @@ client.on('message', message => {
 });
 
 client.on('guildMemberAdd', newMember => {
+    console.log("New user");
+});
+
+/*client.on('guildMemberAdd', newMember => {
     let newUser = newMember.user.username;
     let welcomeMessages = [
         `WOOOP WOOOOP BICHTES! Die Party kann steigen! ${newUser} is hier!`,
@@ -59,7 +63,7 @@ client.on('guildMemberAdd', newMember => {
     krasserChannel.send(welcomeEmbed);
 
     newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '692409031482015785'], "Auto Role Join")
-})
+})*/
 
 client.on('guildMemberRemove', oldMember => {
     const userName = oldMember.user.username;
