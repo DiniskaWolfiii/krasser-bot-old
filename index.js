@@ -46,7 +46,8 @@ client.on('guildMemberAdd', newMember => {
     let welcomeMessages = [
         `WOOOP WOOOOP BICHTES! Die Party kann steigen! ${newUser} is hier!`,
         `Ach nur ${newUser} ist es, niemand wichtiges.`,
-        `Macht den Landeplatz für ${newUser} frei, denn ${newUser} landet in T-10, 9, 8........ Zu langsam... JETZT!!! :rocket:`
+        `Macht den Landeplatz für ${newUser} frei, denn ${newUser} landet in T-10, 9, 8........ Zu langsam... JETZT!!! :rocket:`,
+        `Willkommen ${newUser}. Bitte halte dich an den Hygienevorschriften, trage deine Mund-Nasen-Bedeckung im gesamten Server und halte den Mindestabstand von 27 Metern ein. Vielen Dank!`
     ]
 
     let randomNumber = Math.floor(Math.random()*welcomeMessages.length);
@@ -69,7 +70,8 @@ client.on('guildMemberRemove', oldMember => {
     let byeMessages = [
         `${userName} hat diesen Server verlassen :(`,
         `Die Treulose Tomate ${userName} hat uns verlassen! DIE SAU`,
-        `${userName} hat sich aus dem Server GEYEETED`
+        `${userName} hat sich aus dem Server GEYEETED`,
+        `${userName} hat Corona und muss in Quarantäne!`
     ]
     let randomNumber = Math.floor(Math.random()*byeMessages.length);
 
@@ -77,7 +79,7 @@ client.on('guildMemberRemove', oldMember => {
     let byeEmbed = new Discord.MessageEmbed()
     .setColor('#FF0000')
     .setThumbnail(oldMember.user.displayAvatarURL())
-    .setTitle('Neuer Krasser Dude ist dazu gekommen!')
+    .setTitle('Krasser Dude hat den Server verlassen!')
     .setDescription(byeMessages[randomNumber]);
 
     let krasserChannel = oldMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
