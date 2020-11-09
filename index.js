@@ -53,7 +53,6 @@ client.on('guildMemberAdd', newMember => {
 
     let randomNumber = Math.floor(Math.random()*welcomeMessages.length);
 
-    if(newMember.guild.id !== '565879649175994368') return;
     let welcomeEmbed = new Discord.MessageEmbed()
     .setColor('#00FF00')
     .setThumbnail(newMember.user.displayAvatarURL())
@@ -63,7 +62,7 @@ client.on('guildMemberAdd', newMember => {
     let krasserChannel = newMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
     krasserChannel.send(welcomeEmbed);
 
-    newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '692409031482015785'], "Auto Role Join")
+    newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '775417214400200734'], "Auto Role Join")
 })
 
 client.on('guildMemberRemove', oldMember => {
@@ -76,7 +75,6 @@ client.on('guildMemberRemove', oldMember => {
     ]
     let randomNumber = Math.floor(Math.random()*byeMessages.length);
 
-    if(oldMember.guild.id !== '565879649175994368') return;
     let byeEmbed = new Discord.MessageEmbed()
     .setColor('#FF0000')
     .setThumbnail(oldMember.user.displayAvatarURL())
