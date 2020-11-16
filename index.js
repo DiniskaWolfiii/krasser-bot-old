@@ -61,8 +61,11 @@ client.on('guildMemberAdd', newMember => {
 
     let krasserChannel = newMember.guild.channels.cache.find(c=>c.id==='692636574831214623');
     krasserChannel.send(welcomeEmbed);
-
-    newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '775417214400200734'], "Auto Role Join")
+    switch (newMember.guild.id) {
+        case '565879649175994368':
+            newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '775417214400200734'], "Auto Role Join")    
+            break;
+    }
 })
 
 client.on('guildMemberRemove', oldMember => {
