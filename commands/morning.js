@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: 'goodmorning',
-    usage: '!goodmorning <@User>',
+    name: 'morning',
+    usage: '!morning <@User>',
     description: 'Wünsche allen einen Guten Morgen!'
 }
