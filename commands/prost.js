@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: 'love',
-    usage: '!love <@User>',
-    description: 'Hab andere Menschen Lieb'
+    name: 'prost',
+    usage: '!prost <@User>',
+    description: 'Stoße mit einem anderen User an!'
 }
