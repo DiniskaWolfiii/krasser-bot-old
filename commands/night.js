@@ -9,8 +9,8 @@ module.exports.run = async (client, message, args) => {
     let taggedUser = message.mentions.members.first();
     try {
         message.delete();
-        if(taggedUser) return message.channel.send(`*${messageUser} wünscht ${taggedUser} einen Gute Nacht!*`)
-        else message.channel.send(`*${messageUser} wünscht allen eine gute Nacht!*`)
+        if(taggedUser) return message.channel.send(`*${messageUser} wünscht ${taggedUser} einen Gute Nacht! :zzz:*`)
+        else message.channel.send(`*${messageUser} wünscht allen eine gute Nacht! :zzz:*`)
     }
 
     catch (error) {
