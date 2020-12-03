@@ -33,7 +33,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: 'slap',
-    usage: '!slap <@User>',
-    description: 'Klatsche einem Typen'
+    name: 'stab',
+    usage: '!stab <@User>',
+    description: 'Stech jemand ab :knife:'
 }
