@@ -63,7 +63,7 @@ client.on('guildMemberAdd', newMember => {
     krasserChannel.send(welcomeEmbed);
     switch (newMember.guild.id) {
         case '565879649175994368':
-            newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059', '775417214400200734'], "Auto Role Join")    
+            newMember.roles.add(['693595225129484289', '692482666469261403', '692482394455933008', '692435890454397059'], "Auto Role Join")    
             break;
     }
 })
