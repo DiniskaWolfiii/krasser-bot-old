@@ -48,7 +48,7 @@ client.on('guildMemberAdd', newMember => {
         `WOOOP WOOOOP BICHTES! Die Party kann steigen! ${newUser} is hier!`,
         `Ach nur ${newUser} ist es, niemand wichtiges.`,
         `Macht den Landeplatz für ${newUser} frei, denn ${newUser} landet in T-10, 9, 8........ Zu langsam... JETZT!!! :rocket:`,
-        `Willkommen ${newUser}. Bitte halte dich an den Hygienevorschriften, trage deine Mund-Nasen-Bedeckung im gesamten Server und halte den Mindestabstand von 27 Metern ein. Vielen Dank!`
+        `Willkommen ${newUser}. Bitte halte dich an den Hygienemaßnahmen, trage deine Mund-Nasen-Bedeckung im gesamten Server und halte den Mindestabstand von 27 Metern ein. Vielen Dank!`
     ]
 
     let randomNumber = Math.floor(Math.random()*welcomeMessages.length);
