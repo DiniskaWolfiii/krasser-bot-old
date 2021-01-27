@@ -32,13 +32,14 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} versucht sich selbst umzubringen... Hat aber vackackt :P*`
         ]
         message.delete();
-        if (taggedUser.id === messageUser.id) {
-            let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
-            message.channel.send(antwortenSelf[randomNumber])
-        }
-        else if (taggedUser) {
+        if (taggedUser) {
+            if (taggedUser.id === messageUser.id) {
+                let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+                message.channel.send(antwortenSelf[randomNumber])
+            } else {
             let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
             message.channel.send(antwortenTagged[randomNumber])
+            }
         } else {
             let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
             message.channel.send(antwortenOhne[randomNumber])
