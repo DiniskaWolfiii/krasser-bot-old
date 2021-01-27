@@ -25,13 +25,22 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} hat das Verlangen jemanden umzubringen :skull:*`,
             `*${messageUser} zückt ein Messer und schaut dabei jemand in diesem Raum an :eyes::skull:*`
         ]
+        let antwortenSelf = [
+            `*${messageUser} bringt sich selbst um :skull:*`,
+            `*${messageUser} bringt sich selbst um :skull:*`,
+            `*${messageUser} bringt sich selbst um :skull:*`,
+            `*${messageUser} versucht sich selbst umzubringen... Hat aber vackackt :P*`
+        ]
         message.delete();
-        if(taggedUser) {
-            let randomNumber = Math.floor(Math.random()*antwortenTagged.length);
+        if (taggedUser) {
+            let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
             message.channel.send(antwortenTagged[randomNumber])
         }
-        else  {
-            let randomNumber = Math.floor(Math.random()*antwortenOhne.length);
+        else if (taggedUser === messageUser) {
+            let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+            message.channel.send(antwortenTagged[randomNumber])
+        } else {
+            let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
             message.channel.send(antwortenOhne[randomNumber])
         }
     } catch (error) {
