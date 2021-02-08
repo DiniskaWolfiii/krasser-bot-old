@@ -20,12 +20,29 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} hat Gehalt bekommen und gibt eine Runde Alkohol aus!*`,
             `*${messageUser} hat kein Geld*`,
             `*${messageUser}'s Kontostand ist gerade Roter als Antonia mit Sonnenbrand*`,
-            `*${messageUser} zeigt seinen fuenf Euro Schein*`
+            `*${messageUser} zeigt einen fuenf Euro Schein*`
         ]
-        let randomNumber = Math.floor(Math.random()*antwortenOhne.length);
+        let antwortenSelf = [
+            `*${messageUser} hat 1 Cent auf der Straße gefunden*`,
+            `*${messageUser} hat 23 Euro auf der Straße gefunden*`,
+            `*${messageUser} gibt sich selbst Geld*`,
+            `*${messageUser} schließt einen Sparbuch ab mit 0% Effektivzins*`,
+            `*${messageUser} gibt sich selbst Geld*`,
+            `*${messageUser} gibt sich selbst Geld*`,
+        ]
         message.delete();
-        if(taggedUser) return message.channel.send(antwortenTagged[randomNumber])
-        else message.channel.send(antwortenOhne[randomNumber])
+        if (taggedUser) {
+            if (taggedUser.id === messageUser.id) {
+                let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+                message.channel.send(antwortenSelf[randomNumber])
+            } else {
+            let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
+            message.channel.send(antwortenTagged[randomNumber])
+            }
+        } else {
+            let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
+            message.channel.send(antwortenOhne[randomNumber])
+        }
     } catch (error) {
         message.channel.send("```js\n" + error + "\n```");
     }

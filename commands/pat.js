@@ -21,10 +21,22 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} will gepatted werdeb*`,
             `*${messageUser} braucht jemand der ihn/sie patted*`
         ]
-        let randomNumber = Math.floor(Math.random()*antwortenOhne.length);
+        let antwortenSeld = [
+            `*${messageUser} patted sich selbst*`
+        ]
         message.delete();
-        if(taggedUser) return message.channel.send(antwortenTagged[randomNumber])
-        else message.channel.send(antwortenOhne[randomNumber])
+        if (taggedUser) {
+            if (taggedUser.id === messageUser.id) {
+                let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+                message.channel.send(antwortenSelf[randomNumber])
+            } else {
+            let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
+            message.channel.send(antwortenTagged[randomNumber])
+            }
+        } else {
+            let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
+            message.channel.send(antwortenOhne[randomNumber])
+        }
     } catch (error) {
         message.channel.send("```js\n" + error + "\n```");
     }

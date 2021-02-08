@@ -10,7 +10,7 @@ module.exports.run = async (client, message, args) => {
     try {
         message.delete();
         if(taggedUser) return message.channel.send(`*${messageUser} hat ${taggedUser} ganz dolle Lieb* :heart:`)
-        else message.channel.send(`Richtige Einstellung ${messageUser}! Erstmal sich selber lieben, wenn es kein anderer tut! :heart:`)
+        else message.channel.send(`Richtige Einstellung ${messageUser}! Erstmal sich selber lieben! :heart:`)
     }
 
     catch (error) {

@@ -7,20 +7,36 @@
 module.exports.run = async (client, message, args) => {
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
-    if(!taggedUser) {
-        message.delete();
-        return message.channel.send(`*${messageUser} hält einen Feuerball in der Hand, und hat keine Angst diesen einzusetzen :fire:*`)
-    }
+
+    let antwortenOhne = [
+        `*${messageUser} hält einen Feuerball in der Hand, und hat keine Angst diesen einzusetzen :fire:*`
+    ]
+    let antwortenSelf = [
+        `*${messageUser} zündet sich selbst an :fire:*`,
+        `*${messageUser} zündet sich selbst an... :fire: You good bro?*`,
+        `*${messageUser} zündet sich selbst an :fire:*`,
+        `*${messageUser} zündet sich selbst an :fire:*`
+    ]
+    let antwortenTagged = [
+        `*${messageUser} zündet ${taggedUser} an :fire:*`,
+        `*${messageUser} zündet ${taggedUser} an :fire:*`,
+        `*${messageUser} zündet ${taggedUser} an :fire:*`,
+        `*Beim Versuch ${taggedUser} anzuzünden, stolpert ${messageUser} und setzt ausversehen den Channel in Brand :fire:*`
+    ]
     try {
-        let antworten = [
-            `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*${messageUser} zündet ${taggedUser} an :fire:*`,
-            `*Beim Versuch ${taggedUser} anzuzünden, stolpert ${messageUser} und setzt ausversehen den Channel in Brand :fire:*`
-        ]
-        let randomNumber = Math.floor(Math.random()*antworten.length);
         message.delete();
-        message.channel.send(antworten[randomNumber]);
+        if (taggedUser) {
+            if (taggedUser.id === messageUser.id) {
+                let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+                message.channel.send(antwortenSelf[randomNumber])
+            } else {
+            let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
+            message.channel.send(antwortenTagged[randomNumber])
+            }
+        } else {
+            let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
+            message.channel.send(antwortenOhne[randomNumber])
+        }
     } catch (error) {
         message.channel.send("```js\n" + error + "\n```");
     }

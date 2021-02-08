@@ -7,25 +7,38 @@
 module.exports.run = async (client, message, args) => {
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
-    if(!taggedUser) {
-        message.delete();
-        let antworten = [
-          `*${messageUser} hält energisch ein Messer in der Hand*`,
+
+        let antwortenOhne = [
+          `*${messageUser} hält energisch ein Messer in der Hand :knife:*`,
           `*${messageUser} hält energisch ein Messer in der Hand und beobachtet jemanden :eyes:*`
         ]
-        let randomNumber = Math.floor(Math.random()*antworten.length);
-        return message.channel.send(antworten[randomNumber]);
-    }
-    try {
-        let antworten = [
-            `*${messageUser} wirft ${taggedUser} mit einem Messer ab!*`,
-            `*${messageUser} wirft ${taggedUser} mit einem Messer ab!*`,
-            `*${messageUser} wirft ${taggedUser} mit einem Messer ab!*`,
-            `*${messageUser} wirft ${taggedUser} mit einem Messer ab und nagelt ${taggedUser} damit an die Wand!*`
+
+        let antwortenTagged = [
+            `*${messageUser} wirft ${taggedUser} mit einem Messer ab! :knife:*`,
+            `*${messageUser} wirft ${taggedUser} mit einem Messer ab! :knife:*`,
+            `*${messageUser} wirft ${taggedUser} mit einem Messer ab! :knife:*`,
+            `*${messageUser} wirft ${taggedUser} mit einem Messer ab und nagelt ${taggedUser} damit an die Wand! :knife:*`
         ]
-        let randomNumber = Math.floor(Math.random()*antworten.length);
+        let antwortenSelf = [
+            `*${messageUser} sticht sich selbst mit einem Messer ab :knife:*`,
+            `*${messageUser} lässt wirft ein Messer hoch und trifft sich selbst damit :knife:*`
+        ]
+
+    try {
+
         message.delete();
-        message.channel.send(antworten[randomNumber]);
+        if (taggedUser) {
+            if (taggedUser.id === messageUser.id) {
+                let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+                message.channel.send(antwortenSelf[randomNumber])
+            } else {
+            let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
+            message.channel.send(antwortenTagged[randomNumber])
+            }
+        } else {
+            let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
+            message.channel.send(antwortenOhne[randomNumber])
+        }
     } catch (error) {
         message.channel.send("```js\n" + error + "\n```");
     }

@@ -7,25 +7,37 @@
 module.exports.run = async (client, message, args) => {
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
-    if(!taggedUser) {
-        message.delete();
-        let antworten = [
+
+        let antwortenOhne = [
           `*${messageUser} friert :cold_face:*`,
           `*${messageUser} will jemand einfrieren :snowflake:*`
         ]
-        let randomNumber = Math.floor(Math.random()*antworten.length);
-        return message.channel.send(antworten[randomNumber]);
-    }
-    try {
-        let antworten = [
+        let antwortenTagged = [
             `*${messageUser} friert ${taggedUser} ein :snowflake:*`,
             `*${messageUser} friert ${taggedUser} ein :snowflake:*`,
             `*${messageUser} friert ${taggedUser} ein :snowflake:*`,
             `*${messageUser} friert ${taggedUser} ein und yeetet ${taggedUser} in ein Gletscher :snowflake:*`,
         ]
-        let randomNumber = Math.floor(Math.random()*antworten.length);
+        let antwortenSelf = [
+            `*${messageUser} friert sich selbst ein :snowflake:*`,
+            `*${messageUser} steht auf Kälte und friert sich selbst ein :snowflake:*`
+        ]
+    }
+    try {
+
         message.delete();
-        message.channel.send(antworten[randomNumber]);
+        if (taggedUser) {
+            if (taggedUser.id === messageUser.id) {
+                let randomNumber = Math.floor(Math.random() * antwortenSelf.length);
+                message.channel.send(antwortenSelf[randomNumber])
+            } else {
+            let randomNumber = Math.floor(Math.random() * antwortenTagged.length);
+            message.channel.send(antwortenTagged[randomNumber])
+            }
+        } else {
+            let randomNumber = Math.floor(Math.random() * antwortenOhne.length);
+            message.channel.send(antwortenOhne[randomNumber])
+        }
     } catch (error) {
         message.channel.send("```js\n" + error + "\n```");
     }

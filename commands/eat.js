@@ -7,19 +7,22 @@
 module.exports.run = async (client, message, args) => {
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
-        let antwortenOhne = [
-            `*${messageUser} hält energisch eine Gabel in der Hand*`
-        ]
-        let antwortenTagged = [
-            `*${messageUser} pickst ${taggedUser} mit einer Gabel. Haha, du wurdest aufgegabelt!*`,
-            `*${messageUser} pickst ${taggedUser} mit einer Gabel. Haha, du wurdest aufgegabelt!*`,
-            `*${messageUser} pickst ${taggedUser} mit einer Gabel. Haha, du wurdest aufgegabelt!*`,
-            `*${messageUser} wirft Gabeln nach ${taggedUser} und gabelt ${taggedUser} damit an die Wand.*`
-        ]
-        let antwortenSelf = [
-            `*${messageUser} pickst sich selbst mit einer Gabel...*`,
-            `*${messageUser} hat Hunger und pickst sich selbst mit einer Gabel... Kann jemand helfen? Das sieht mir nicht ganz natürlich aus...*`
-        ]
+
+    let antwortenOhne = [
+        `*${messageUser} hat das Verlangen jemanden zu essen :eyes:*`,
+        `*${messageUser} hat das Verlangen jemanden zu essen und schaut dabei jemand im Raum an :eyes:*`
+    ]
+    let antwortenSelf = [
+        `*${messageUser} isst sich selbst :eyes:`,
+        `*${messageUser} isst sich selbst :eyes:`,
+        `*${messageUser} isst sich selbst :eyes:`
+    ]
+    let antwortenTagged = [
+        `*${messageUser} isst ${taggedUser} :eyes:*`,
+        `*${messageUser} isst ${taggedUser} :eyes:*`,
+        `*${messageUser} isst ${taggedUser} :eyes:*`,
+        `*Beim Versuch ${taggedUser} anzuzünden, stolpert ${messageUser} und bricht sich die Zähne :eyes:*`
+    ]
     try {
         message.delete();
         if (taggedUser) {
@@ -41,7 +44,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: 'gabel',
-    usage: '!gabel <@User>',
-    description: 'Steche Leute mit einer Gabel ab'
+    name: 'eat',
+    usage: '!eat <@User>',
+    description: 'Esse ein paar deiner Mitmenschen :devil:'
 }
