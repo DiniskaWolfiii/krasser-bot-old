@@ -22,7 +22,7 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} friert sich selbst ein :snowflake:*`,
             `*${messageUser} steht auf Kälte und friert sich selbst ein :snowflake:*`
         ]
-    }
+
     try {
 
         message.delete();
