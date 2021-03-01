@@ -13,14 +13,14 @@ module.exports.run = async (client, message, args) => {
           `*${messageUser} trinkt ein Bier :beer:*`,
           `*${messageUser} trinkt ein Bier :beer:*`,
           `*${messageUser} trinkt ein Bier :beer:*`,
-          `*${messageUser} trinkt ein Radler :beer:*`,
+          `*${messageUser} trinkt ein Radler :beer:*`
         ]
         let antwortenTagged = [
             `*${messageUser} gibt ${taggedUser} ein Bier :beer:*`,
             `*${messageUser} gibt ${taggedUser} ein Bier :beer:*`,
             `*${messageUser} gibt ${taggedUser} ein Bier :beer:*`,
             `*${messageUser} gibt ${taggedUser} ein Bier :beer:*`,
-            `*${messageUser} gibt ${taggedUser} ein Radler :beer:*`,
+            `*${messageUser} gibt ${taggedUser} ein Radler :beer:*`
         ]
         let antwortenSelf = [
             `*${messageUser} gibt sich selber ein Bier... Nun gut... Wenn du niemand anderen hast :shrug: Prost! :beers:*`,
