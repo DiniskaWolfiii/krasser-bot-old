@@ -29,7 +29,14 @@ module.exports.run = async (client, message, args) => {
             'Frag doch einfach nochmaaaaal',
             'Halts Maul, du Nutte',
             'Es ist Montag, lass mich inruhe',
-            ':zzz:'
+            ':zzz:',
+            'Sie ist ne Mörderin... Idiot.',
+            'Kommst du nicht selber drauf??',
+            'Wie kommst du auf die Idee das ein Stück Plastik die Antwort weiß??',
+            'Hau ab.',
+            'Geh weg. Bitte.',
+            'Ich schlafe mit deiner Frau',
+            'Bitte. Geh sterben.'
         ]
 
         let randomNumber = Math.floor(Math.random()*antworten.length);
