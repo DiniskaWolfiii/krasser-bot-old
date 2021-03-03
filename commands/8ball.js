@@ -36,7 +36,21 @@ module.exports.run = async (client, message, args) => {
             'Hau ab.',
             'Geh weg. Bitte.',
             'Ich schlafe mit deiner Frau',
-            'Bitte. Geh sterben.'
+            'Bitte. Geh sterben.',
+            'Och nee, die haben jetzt nicht noch Trump mit reingezogen... oder??',
+            'BITTTCCHH, natürlich ist die Antwort nein',
+            'Frag doch einfach deine Mülltonne. Die weiß dein Müll kompensiert',
+            'Hier. Hast. Du. Scheiße. :poop:',
+            ':poop:',
+            'Ich liebe dich auch... nicht.',
+            'Nachdem du gestern mit meiner Freunding fremdgegangen bist, ist meine Antwort das hier: :knife:',
+            'Du wurdest GEBÄÄÄÄÄHHTT!!! :baaahhh:',
+            'Was? Ich verstehe kein Idiotisch',
+            'Du wirst niemals Glücklich werden nach dieser Frage...',
+            'Hat deine Mutter dich als Kind auf dem Kopf fallen lassen?',
+            'War deine Schaukel als Kind gegen die Wand gerichtet?',
+            'Ich sehe deine Zukunft... Und sehe Schwarz',
+            'Well, duh'
         ]
 
         let randomNumber = Math.floor(Math.random()*antworten.length);
