@@ -21,8 +21,9 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} will gepatted werdeb*`,
             `*${messageUser} braucht jemand der ihn/sie patted*`
         ]
-        let antwortenSeld = [
-            `*${messageUser} patted sich selbst*`
+        let antwortenSelf = [
+            `*${messageUser} patted sich selbst*`,
+            `*${messageUser} patted sich selbst... Kann ihn bitte jemand helfen?*`
         ]
         message.delete();
         if (taggedUser) {
