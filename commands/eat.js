@@ -21,7 +21,7 @@ module.exports.run = async (client, message, args) => {
         `*${messageUser} isst ${taggedUser} :eyes:*`,
         `*${messageUser} isst ${taggedUser} :eyes:*`,
         `*${messageUser} isst ${taggedUser} :eyes:*`,
-        `*Beim Versuch ${taggedUser} anzuzünden, stolpert ${messageUser} und bricht sich die Zähne :eyes:*`
+        `*Beim Versuch ${taggedUser} zu essen, stolpert ${messageUser} und bricht sich die Zähne :eyes:*`
     ]
     try {
         message.delete();
