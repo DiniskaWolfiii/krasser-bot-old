@@ -4,26 +4,26 @@
  * @param {import('discord.js').Client} client
  * @param {import('discord.js').Message} message
  */
-module.exports.run = async (client, message, args) => {
+ module.exports.run = async (client, message, args) => {
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
     try {
         let antwortenTagged = [
-            `*${messageUser} patted ${taggedUser}*`,
-            `*${messageUser} patted ${taggedUser}*`,
-            `*${messageUser} patted ${taggedUser}*`,
-            `*${messageUser} patted ${taggedUser} zu Tode*`
+            `*${messageUser} ruft ${taggedUser} von den Toten zurück*`,
+            `*${messageUser} ruft ${taggedUser} von den Toten zurück*`,
+            `*${messageUser} ruft ${taggedUser} von den Toten zurück*`,
+            `*${messageUser} macht ein Ritual und ruft ${taggedUser}*`
         ]
 
         let antwortenOhne = [
-            `*${messageUser} will gepatted werden*`,
-            `*${messageUser} hat das Verlangen gestreichelt zu werden*`,
-            `*${messageUser} will gepatted werden*`,
-            `*${messageUser} braucht jemand der ihn/sie patted*`
+            `*${messageUser} tanz weird rum...*`,
+            `*${messageUser} will jemand von den Toten zurückrufen...*`,
+            `*${messageUser} versucht jemand zu Rufen...*`,
+            `*${messageUser} versucht jemand vom Jenseits zurückzurufen, aber die Astralischen Kräfte sind zu mächtig und erlauben das nicht...*`
         ]
         let antwortenSelf = [
-            `*${messageUser} patted sich selbst*`,
-            `*${messageUser} patted sich selbst... Kann ihn bitte jemand helfen?*`
+            `*${messageUser} ersteht von den Toten auf!*`,
+            `*${messageUser} erscheint!*`
         ]
         message.delete();
         if (taggedUser) {
@@ -45,7 +45,7 @@ module.exports.run = async (client, message, args) => {
 }
 
 module.exports.help = {
-    name: 'pat',
-    usage: '!pat <@User>',
-    description: 'Streichel einen User'
+    name: 'summon',
+    usage: '!summon <@User>',
+    description: 'Rufe den User von den Toten zurück'
 }
