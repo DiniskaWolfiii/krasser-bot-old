@@ -5,6 +5,8 @@
  * @param {import('discord.js').Message} message
  */
 module.exports.run = async (client, message, args) => {
+    if(args[0] === '@everyone') return;
+    if(args[0] === '@everyone') return;
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
     try {

@@ -5,6 +5,7 @@
  * @param {import('discord.js').Message} message
  */
  module.exports.run = async (client, message, args) => {
+     if (args[0] === '@everyone') return;
     let messageUser = message.member;
     let taggedUser = message.mentions.members.first();
 
@@ -15,9 +16,9 @@
         `*${messageUser} hält energisch einen Löffel in der Hand :spoon:*`
     ]
     let antwortenSelf = [
-        `*${messageUser} löffelt sich selbst :spoon:`,
-        `*${messageUser} löffelt sich selbst eine :spoon:`,
-        `*${messageUser} hebt einen Löffel :spoon:`
+        `*${messageUser} löffelt sich selbst :spoon:*`,
+        `*${messageUser} löffelt sich selbst eine :spoon:*`,
+        `*${messageUser} hebt einen Löffel :spoon:*`
     ]
     let antwortenTagged = [
         `*${messageUser} löffelt ${taggedUser} eine :spoon:*`,
