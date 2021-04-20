@@ -14,9 +14,10 @@ module.exports.run = async (client, message, args) => {
         `*${messageUser} hat das Verlangen jemanden zu essen und schaut dabei jemand im Raum an :eyes:*`
     ]
     let antwortenSelf = [
-        `*${messageUser} isst sich selbst :eyes:`,
-        `*${messageUser} isst sich selbst :eyes:`,
-        `*${messageUser} isst sich selbst :eyes:`
+        `*${messageUser} isst sich selbst :eyes:*`,
+        `*${messageUser} isst sich selbst :eyes:*`,
+        `*${messageUser} isst sich selbst :eyes:*`,
+        `*${messageUser} isst sich selbst... Zählt das jetzt als Kannibalismus??*`
     ]
     let antwortenTagged = [
         `*${messageUser} isst ${taggedUser} :eyes:*`,
