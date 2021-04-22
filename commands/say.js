@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
     let text = '';
     try {
         for(var i = 0; i < args.length; i++) {
-text = text + args[i];
+text = text + args[i] + ' ';
     }
 message.delete();
 message.channel.send(text);
