@@ -13,6 +13,7 @@ text = text + args[i];
     }
 message.delete();
 message.channel.send(text);
+}
     catch (error) {
         message.channel.send("```js\n" + error + "\n```");
     }
