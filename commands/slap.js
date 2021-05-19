@@ -22,6 +22,8 @@ module.exports.run = async (client, message, args) => {
             `*${messageUser} klatscht ${taggedUser}*`,
             `*${messageUser} klatscht ${taggedUser}*`,
             `*${messageUser} klatscht ${taggedUser}*`,
+            `*${messageUser} klatscht ${taggedUser}*`,
+            `*${messageUser} klatscht ${taggedUser}*`,
             `*${messageUser} klatscht ${taggedUser} auf den Ass*`
         ]
         let randomNumber = Math.floor(Math.random()*antworten.length);
