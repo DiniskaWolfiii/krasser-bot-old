@@ -10,22 +10,21 @@
     let taggedUser = message.mentions.members.first();
 
     let antwortenOhne = [
-        `*${messageUser} will jemand in Quarantäne schicken... :eyes:*`,
-        `*${messageUser} hat Angst und schiebt gleich jemand in Quarantäne...*`
+        `*${messageUser} ist grad traurig :(*`,
+        `*${messageUser} ist grad traurig :(*`,
+        `*${messageUser} hat grad schlechte Laune... Mag jemand helfen? :,(*`
     ]
     let antwortenSelf = [
-        `*${messageUser} hat kein Bock mehr und beantragt Quarantäne für 2 Jahre...*`,
-        `*${messageUser} schiebt sich selbst in Quarantäne... Bis in 14 Tagen!*`,
-        `*${messageUser} befindet sich noch in Quarantäne... Die geht noch... Hat niemand dokumentiert... Also von neu. 14 Tage!*`,
-        `*${messageUser} geht in Quarantäne*`
+        `*${messageUser} ist grad traurig :(*`,
+        `*${messageUser} ist grad traurig :(*`,
+        `*${messageUser} hat grad schlechte Laune... Mag jemand helfen? :,(*`
     ]
     let antwortenTagged = [
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne! 14 Tage ab jetzt*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne!*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne!*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne, trotz eines Negativen Testes!*`,
-        `*${messageUser} yeeted ${taggedUser} in Quarantäne! Bis in 14 Tagen!*`,
-        `*${taggedUser} wird von ${messageUser} in Quarantäne geschoben. Bis in 14 Tagen!*`
+        `*${messageUser} trauert mit ${taggedUser} :(*`,
+        `*${messageUser} trauert mit ${taggedUser} :(*`,
+        `*${messageUser} trauert mit ${taggedUser} :(*`,
+        `*${messageUser} weint mit ${taggedUser} :,(*`,
+        `*${messageUser} weint mit ${taggedUser} :,(*`
     ]
     try {
         message.delete();
@@ -48,7 +47,7 @@
 }
 
 module.exports.help = {
-    name: 'quarantane',
-    usage: '!quarantane <@User>',
-    description: 'Schiebe jemand in Quarantäne!'
+    name: 'sad',
+    usage: '!sad <@User>',
+    description: 'Trauere mit anderen Leuten!'
 }

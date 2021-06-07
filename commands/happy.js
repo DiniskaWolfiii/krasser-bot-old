@@ -10,22 +10,22 @@
     let taggedUser = message.mentions.members.first();
 
     let antwortenOhne = [
-        `*${messageUser} will jemand in Quarantäne schicken... :eyes:*`,
-        `*${messageUser} hat Angst und schiebt gleich jemand in Quarantäne...*`
+        `*${messageUser} ist total happy! :wolfWOW:*`,
+        `*${messageUser} ist absolut mega super duper happy! :wolfWOW:*`,
+        `*${messageUser} ist total happy! :wolfWOW:*`,
+        `*${messageUser} ist mega gut gelaunt! :wolfWOW: Weiter so!*`,
     ]
     let antwortenSelf = [
-        `*${messageUser} hat kein Bock mehr und beantragt Quarantäne für 2 Jahre...*`,
-        `*${messageUser} schiebt sich selbst in Quarantäne... Bis in 14 Tagen!*`,
-        `*${messageUser} befindet sich noch in Quarantäne... Die geht noch... Hat niemand dokumentiert... Also von neu. 14 Tage!*`,
-        `*${messageUser} geht in Quarantäne*`
+        `*${messageUser} hat niemand der gute Laune will und gibt sich selber gute Laune!*`,
+        `*${messageUser} hat niemand der gute Laune will und gibt sich selber gute Laune!*`
     ]
     let antwortenTagged = [
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne! 14 Tage ab jetzt*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne!*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne!*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne, trotz eines Negativen Testes!*`,
-        `*${messageUser} yeeted ${taggedUser} in Quarantäne! Bis in 14 Tagen!*`,
-        `*${taggedUser} wird von ${messageUser} in Quarantäne geschoben. Bis in 14 Tagen!*`
+        `*${messageUser} verteilt gute Laune an ${taggedUser}!*`,
+        `*${messageUser} verteilt gute Laune an ${taggedUser}!*`,
+        `*${messageUser} verteilt gute Laune an ${taggedUser}!*`,
+        `*${messageUser} verteilt gute Laune an ${taggedUser}!*`,
+        `*${messageUser} verteilt gute Laune an ${taggedUser}!*`,
+        `*${messageUser} verteilt gute Laune an ${taggedUser}!*`
     ]
     try {
         message.delete();
@@ -48,7 +48,7 @@
 }
 
 module.exports.help = {
-    name: 'quarantane',
-    usage: '!quarantane <@User>',
-    description: 'Schiebe jemand in Quarantäne!'
+    name: 'happy',
+    usage: '!happy <@User>',
+    description: 'Zeig deine Glücklichkeit!'
 }

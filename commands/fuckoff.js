@@ -10,22 +10,24 @@
     let taggedUser = message.mentions.members.first();
 
     let antwortenOhne = [
-        `*${messageUser} will jemand in Quarantäne schicken... :eyes:*`,
-        `*${messageUser} hat Angst und schiebt gleich jemand in Quarantäne...*`
+        `*${messageUser}'s Worte: "Fuck-off..."*`,
+        `*${messageUser}'s Worte: "Fuck-off..."*`,
+        `*${messageUser} hat keinen Bock mehr und wirft alles hin... Just Fuck off...*`,
+        `*${messageUser} will einfach nicht mehr und schmeißt alles hin. FUCK-OFF!*`,
     ]
     let antwortenSelf = [
-        `*${messageUser} hat kein Bock mehr und beantragt Quarantäne für 2 Jahre...*`,
-        `*${messageUser} schiebt sich selbst in Quarantäne... Bis in 14 Tagen!*`,
-        `*${messageUser} befindet sich noch in Quarantäne... Die geht noch... Hat niemand dokumentiert... Also von neu. 14 Tage!*`,
-        `*${messageUser} geht in Quarantäne*`
+        `*${messageUser}'s Worte: "Fuck-off..."*`,
+        `*${messageUser}'s Worte: "Fuck-off..."*`,
+        `*${messageUser} hat keinen Bock mehr und wirft alles hin... Just Fuck off...*`,
+        `*${messageUser} will einfach nicht mehr und schmeißt alles hin. FUCK-OFF!*`,
     ]
     let antwortenTagged = [
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne! 14 Tage ab jetzt*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne!*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne!*`,
-        `*${messageUser} schiebt ${taggedUser} in Quarantäne, trotz eines Negativen Testes!*`,
-        `*${messageUser} yeeted ${taggedUser} in Quarantäne! Bis in 14 Tagen!*`,
-        `*${taggedUser} wird von ${messageUser} in Quarantäne geschoben. Bis in 14 Tagen!*`
+        `*${messageUser} ist angepisst von ${taggedUser}... Fuck-Off...*`,
+        `*${messageUser} ist angepisst von ${taggedUser}... Fuck-Off...*`,
+        `*${messageUser} ist angepisst von ${taggedUser}... Fuck-Off...*`,
+        `*${messageUser} ist angepisst von ${taggedUser}... Fuck-Off...*`,
+        `*${messageUser} ist angepisst von ${taggedUser}... Fuck-Off...*`,
+        `*${messageUser} ist angepisst von ${taggedUser}... Fuck-Off...*`
     ]
     try {
         message.delete();
@@ -48,7 +50,7 @@
 }
 
 module.exports.help = {
-    name: 'quarantane',
-    usage: '!quarantane <@User>',
-    description: 'Schiebe jemand in Quarantäne!'
+    name: 'fuckoff',
+    usage: '!fuckoff <@User>',
+    description: 'Just Fuck off...'
 }
