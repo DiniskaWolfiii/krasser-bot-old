@@ -10,10 +10,10 @@
     let taggedUser = message.mentions.members.first();
 
     let antwortenOhne = [
-        `*${messageUser} verteilt Good Vibes!!! :wolfWOW:*`,
-        `*${messageUser} verteilt Good Vibes!!! :wolfWOW:*`,
-        `*${messageUser} sprüht voller Good Vibes!!! :wolfWOW:*`,
-        `*${messageUser} ist umgeben von Lauter Good Vibes!! :wolfWOW:*`
+        `*${messageUser} verteilt Good Vibes!!!*`,
+        `*${messageUser} verteilt Good Vibes!!!*`,
+        `*${messageUser} sprüht voller Good Vibes!!!*`,
+        `*${messageUser} ist umgeben von Lauter Good Vibes!!*`
     ]
     let antwortenSelf = [
         `*${messageUser} hat niemand der Good Vibes will und gibt sich selber gute Laune!*`,
@@ -48,7 +48,7 @@
 }
 
 module.exports.help = {
-    name: 'goodvibe',
-    usage: '!goodvibe <@User>',
+    name: 'goodvibes',
+    usage: '!goodvibes <@User>',
     description: 'Verteile gute Laune!'
 }

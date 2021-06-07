@@ -10,10 +10,10 @@
     let taggedUser = message.mentions.members.first();
 
     let antwortenOhne = [
-        `*${messageUser} ist total happy! :wolfWOW:*`,
-        `*${messageUser} ist absolut mega super duper happy! :wolfWOW:*`,
-        `*${messageUser} ist total happy! :wolfWOW:*`,
-        `*${messageUser} ist mega gut gelaunt! :wolfWOW: Weiter so!*`,
+        `*${messageUser} ist total happy!*`,
+        `*${messageUser} ist absolut mega super duper happy!`,
+        `*${messageUser} ist total happy!*`,
+        `*${messageUser} ist mega gut gelaunt! Weiter so!*`,
     ]
     let antwortenSelf = [
         `*${messageUser} hat niemand der gute Laune will und gibt sich selber gute Laune!*`,
