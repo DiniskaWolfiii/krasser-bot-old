@@ -72,9 +72,6 @@ module.exports.run = async (client, message, args) => {
         .setFooter('Question by ' + message.member.user.username, message.member.user.displayAvatarURL())
 
         message.channel.send(krassesEmbed);
-/*    } catch (error) {
-        message.channel.send("```js\n" + error + "\n```");
-    }*/
 
 }
 
