@@ -1,3 +1,4 @@
+const hastebin = require('hastebin-save');
 /**
  *
  *
@@ -5,7 +6,7 @@
  * @param {import('discord.js').Message} message
  */
 module.exports.run = async (client, message, args) => {
-
+    
     const {ownerID} = require('./../botconfig.json');
     const argsEval = message.content.split(" ").slice(1); 
     if(message.author.id !== ownerID) return message.reply('sorry, aber du darfst diesen Command nicht ausführen! :(');
@@ -23,13 +24,8 @@ module.exports.run = async (client, message, args) => {
                 code: "xl"
             });
         } else {
-            hastebin(fertigerEval, {
-                extension: "json",
-                url: "https://hasteb.in"
-            }).then(haste => {
-                message.channel.send(haste);
-            }).catch(error => {
-                message.channel.send(error);
+            hastebin.upload(fertigerEval, link => {
+                message.channel.send('https://hastebin.com/' + link)
             })
         }
     } catch (err) {
