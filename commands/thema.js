@@ -7,6 +7,12 @@ const Discord = require('discord.js');
  * @param {import('discord.js').Message} message
  */
 module.exports.run = (client, message, args) => {
+    if(message.channel.id !== '864914449906794556') {
+        message.delete();
+        message.channel.send('Falscher Kanal! Gebe dir die Diskutieren Rolle in ' + message.guild.channels.cache.find(c=>c.id==='692420125302980690').toString() + ' und gehe dann in den Diskutieren Kanal um über ein Thema zu diskutieren!');
+        return;
+    }
+
     if (message.channel.topic.startsWith('AKTIV:')) {
         let txtEmbed = new Discord.MessageEmbed()
             .setDescription('Es ist gerade ein Thema zum Diskutieren am laufen! Checke die Channel Beschreibung!')
