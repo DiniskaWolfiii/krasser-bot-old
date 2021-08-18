@@ -12,7 +12,7 @@ module.exports.run = async (client, message, args) => {
     
         if(message.author.id !== ownerID) return message.reply('DU BIST NICHT WOLFIII. HALTS MAUL! :c');
     
-        message.channel.send(':zzz: Good Night!')
+        message.channel.send(':zzz: Be right back!')
         .then(msg => {
             client.destroy();
             shelljs.exec('pm2 restart krasser-bot');
